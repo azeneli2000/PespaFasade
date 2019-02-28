@@ -1,0 +1,8 @@
+bin\Debug\PespaFasadeLibrary.dll
+bin\Debug\PespaFasadeLibrary.pdb
+bin\Debug\DevComponents.DotNetBar.dll
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\PespaFasadeLibrary.Form.resources
+obj\Debug\PespaFasadeLibrary.csproj.GenerateResource.Cache
+obj\Debug\PespaFasadeLibrary.dll
+obj\Debug\PespaFasadeLibrary.pdb

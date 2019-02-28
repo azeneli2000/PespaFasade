@@ -1,0 +1,320 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4BC49D19-E2BC-4C24-B05A-E3B4D535DEDD}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PespaFasade</RootNamespace>
+    <AssemblyName>PespaFasade</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=10.2.3600.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DevComponents.DotNetBar, Version=5.9.0.0, Culture=neutral, PublicKeyToken=6d649f5e9b3afca5" />
+    <Reference Include="DocumentManager, Version=0.9.6.0, Culture=neutral, PublicKeyToken=d9f5cd6d45cde5f3" />
+    <Reference Include="Janus.Windows.Common, Version=1.0.2500.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="Janus.Windows.Common.v2, Version=2.0.1105.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="janus.windows.ui.v2, Version=2.0.1105.0, Culture=neutral, PublicKeyToken=21d5517571b185bf" />
+    <Reference Include="PespaFasadeLibrary, Version=1.0.2417.20883, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\PespaFasadeLibrary\bin\Debug\PespaFasadeLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CrStatistika.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrStatistika.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DsPespa.cs">
+      <DependentUpon>DsPespa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsPespa.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsPespa.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsStatistika.cs">
+      <DependentUpon>DsStatistika.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsStatistika.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsStatistika.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FaqeKryesore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FaqeKryesore.Designer.cs">
+      <DependentUpon>FaqeKryesore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FutVlereReale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FutVlereReale.Designer.cs">
+      <DependentUpon>FutVlereReale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KonfigurimeKapake.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KonfigurimeKapake.Designer.cs">
+      <DependentUpon>KonfigurimeKapake.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KonfigurimeKasete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KonfigurimeKasete.Designer.cs">
+      <DependentUpon>KonfigurimeKasete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KonfigurimePrHorizontale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KonfigurimePrHorizontale.Designer.cs">
+      <DependentUpon>KonfigurimePrHorizontale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KonfigurimePrVertikale.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KonfigurimePrVertikale.Designer.cs">
+      <DependentUpon>KonfigurimePrVertikale.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PespaFasadeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PespaFasadeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CrStatistika.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrStatistika.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FaqeKryesore.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FaqeKryesore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FutVlereReale.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>FutVlereReale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KonfigurimeKapake.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>KonfigurimeKapake.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KonfigurimeKasete.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>KonfigurimeKasete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KonfigurimePrHorizontale.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>KonfigurimePrHorizontale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KonfigurimePrVertikale.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>KonfigurimePrVertikale.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShtoGjysemStruktural.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShtoGjysemStruktural.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShtoKapak.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShtoKapak.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShtoProjekt.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShtoProjekt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShtoStruktural.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>ShtoStruktural.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Siperfaqe.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Siperfaqe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Statistika.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Statistika.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ShtoGjysemStruktural.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShtoGjysemStruktural.Designer.cs">
+      <DependentUpon>ShtoGjysemStruktural.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShtoKapak.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShtoKapak.Designer.cs">
+      <DependentUpon>ShtoKapak.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShtoProjekt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShtoProjekt.Designer.cs">
+      <DependentUpon>ShtoProjekt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ShtoStruktural.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShtoStruktural.Designer.cs">
+      <DependentUpon>ShtoStruktural.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Siperfaqe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Siperfaqe.Designer.cs">
+      <DependentUpon>Siperfaqe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Statistika.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Statistika.Designer.cs">
+      <DependentUpon>Statistika.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shut Down.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\!4.ICO" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LunaXP Icon 13.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancel_f2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\generic.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save_f2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\news_info.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="DsPespa.xsc">
+      <DependentUpon>DsPespa.xsd</DependentUpon>
+    </None>
+    <None Include="DsPespa.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsPespa.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsPespa.xss">
+      <DependentUpon>DsPespa.xsd</DependentUpon>
+    </None>
+    <None Include="DsStatistika.xsc">
+      <DependentUpon>DsStatistika.xsd</DependentUpon>
+    </None>
+    <None Include="DsStatistika.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsStatistika.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsStatistika.xss">
+      <DependentUpon>DsStatistika.xsd</DependentUpon>
+    </None>
+    <None Include="PespaFasadeDataSet.xsc">
+      <DependentUpon>PespaFasadeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PespaFasadeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PespaFasadeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PespaFasadeDataSet.xss">
+      <DependentUpon>PespaFasadeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\cancel.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PespaFasade.mdb">
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PespaFasade", "PespaFasade\PespaFasade.csproj", "{4BC49D19-E2BC-4C24-B05A-E3B4D535DEDD}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F131DFED-66C2-47A4-B82E-DF3D59E1A5CE} = {F131DFED-66C2-47A4-B82E-DF3D59E1A5CE}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PespaFasadeLibrary", "PespaFasadeLibrary\PespaFasadeLibrary.csproj", "{F131DFED-66C2-47A4-B82E-DF3D59E1A5CE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4BC49D19-E2BC-4C24-B05A-E3B4D535DEDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BC49D19-E2BC-4C24-B05A-E3B4D535DEDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BC49D19-E2BC-4C24-B05A-E3B4D535DEDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BC49D19-E2BC-4C24-B05A-E3B4D535DEDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F131DFED-66C2-47A4-B82E-DF3D59E1A5CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F131DFED-66C2-47A4-B82E-DF3D59E1A5CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F131DFED-66C2-47A4-B82E-DF3D59E1A5CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F131DFED-66C2-47A4-B82E-DF3D59E1A5CE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
